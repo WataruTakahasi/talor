@@ -14,9 +14,23 @@
     <!--<link rel="apple-touch-icon-precomposed" href="画像のURL" /> スマホ用のお気に入り画像-->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   </head>
 
   <body>
+    <nav class="nav">
+      <h3 class="nav_title">Taylor Guitar</h3>
+      <div class="nav_menu">
+        <input id="nav-check" class="nav-check" type="checkbox">
+          <label class="nav-label" for="nav-check"><i class="fas fa-bars"></i></label>
+          <div class="nav-content">
+            <h2>Home</h2>
+            <h2>History</h2>
+            <h2>Users</h2>
+            <h2>Contact</h2>
+          </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
