@@ -1,21 +1,26 @@
+
 <section class="home_main">
   <header>
     <div class="position_relative header_div">
-      <h1 class="header_h1 potition_absolute_center">What is<br>&emsp;Taylor Guitar</h1>
+      <div class="potition_absolute_center">
+        <h1 class="header_h1">What is</h1><h1 class="header_h1">&emsp;Taylor Guitar<span><i class="fas fa-guitar"></i></span></h1>
+      </div>
       <div class="header_bgimg1"></div>
       <div class="header_bgimg2"></div>
     </div>
   </header>
   
   <section class="position_relative history">
-    <div class="width_65 float_right potition_absolute_center">
-      <h2 class="home_h2">History</h2>
-      <p class="history_p">カリフォルニア州エルカホンに拠点を置くアメリカのギターメーカー。<br>
-      1974年設立、電子制御の工作機械を積極的に導入し、個体差に悩まされない均一性のある生産。<br>
-      演奏現場での使われ方を調査し、生音のマイク乗りなど音響性能に深くこだわった設計<br>
-      今やマーチンやギブソンと並ぶ3大ギターブランド。<br>
-      二つの工場で700名以上の従業員を抱える大企業に成長。
-      </p>
+    <div class="width_65 float_right potition_absolute_center history_line_div">
+      <div class="history_line">
+        <h2 class="home_h2">History</h2>
+        <p class="history_p">カリフォルニア州エルカホンに拠点を置くアメリカのギターメーカー。<br>
+        1974年設立、電子制御の工作機械を積極的に導入し、個体差に悩まされない均一性のある生産。<br>
+        演奏現場での使われ方を調査し、生音のマイク乗りなど音響性能に深くこだわった設計<br>
+        今やマーチンやギブソンと並ぶ3大ギターブランド。<br>
+        二つの工場で700名以上の従業員を抱える大企業に成長。
+        </p>
+      </div>
     </div>
     <div class="width_30">
       <div class="history1">
@@ -39,24 +44,49 @@
     </div>
   </section>
   
-  <section class="users">
-    <h2 class="home_h2">Users</h2>
-    <div class="taylorswift">
-      <h3 class="user_name">Taylor Swift</h3>
-      <p>aaaaa</p>
-    </div>
-    <div class="jasonmraz">
-      <h3 class="user_name">Jason Mraz</h3>
-      <p>aaaaa</p>
-    </div>
-    <div class="nisina">
-      <h3 class="user_name">にしな</h3>
-      <p>aaaaa</p>
+  <section class="users position_relative">
+    <h2 class="home_h2 width_30 potition_absolute_center">Users</h2>
+    <div class="example_users width_65 potition_absolute_center">
+      <div class="buttons">
+        <div class="button prev float_left">
+          <i class="fas fa-chevron-circle-left"></i>
+        </div>
+        <div class="button next float_left">
+          <i class="fas fa-chevron-circle-right"></i>
+        </div>
+      </div>
+      <div class="taylorswift user slide active active_button">
+        <%= image_tag '/img/taylorswift.png', class:"users_img" %>
+        <div class="users_info">
+          <h3 class="user_name text_align_center">Taylor Swift</h3>
+          <p>1989年12月13日、アメリカ・ペンシルベニア州ウエスト・レディング生まれのミュージシャン兼女優テイラー・スウィフト（Taylor Swift）。身長178cm。 これまでにグラミー賞を7度受賞、また、グラミー賞の中でも最も栄誉のある賞とされる「年間最優秀アルバム賞」を史上最年少で受賞している。過去の作品の総売上枚数は4,000万枚以上、そして楽曲ダウンロード数は1.3億を超える。</p>
+        </div>
+      </div>
+      <div class="jasonmraz user slide">
+        <%= image_tag '/img/jasonMraz.png', class:"users_img" %>
+        <div class="users_info">
+        <h3 class="user_name text_align_center">Jason Mraz</h3>
+        <p>1999年にサンディエゴの喫茶店でのライブでスタートを切って以来、ジェイソン・ムラーズ(Jason Mraz)は彼のポジティブなメッセージとソウルフルでフォークポップなサウンドを世界中のファンに届けています。2008年5月、3枚目のアルバム『We Sing, We Dance, We Steal Things』をリリース。全米初登場3位を記録。彼のシングル「I'm Yours」と「I Won't Give Up」でポップの歴史を築き、第51回グラミー賞で最優秀楽曲賞と最優秀男性ポップボーカル賞にノミネートされました。 2018年にアルバム「Know。」がUS Billboard 200で好評を博したのに加えて、最近は彼のミュージカルWaitressをデビューさせました。</p>
+      </div>
+      </div>
+      <div class="nisina user slide">
+      <%= image_tag '/img/nisina.png', class:"users_img" %>
+        <div class="users_info">
+        <h3 class="user_name text_align_center">にしな</h3>
+        <p>1998年7月25日生まれで、出身地は東京です。ソニーミュージックが行うアーティスト養成講座「the LESSON」の 4期生に合格したことをきっかけに音楽を始め、2017年からライブハウスでの活動を始めています。自身の弾き語りでの活動の他に、4ピースバンド「アサナユフナ」やアコースティック･セッション･ユニット「ぷらそにか」としても活動しています。</p>
+      </div>
+      </div>
     </div>
   </section>
   
-  <section class="contact">
-    <h2 class="home_h2">feel free to Contact</h2>
+
+  
+  <section class="contact position_relative">
+    <a href="mailto:choices&#64;outlook.jp">
+    <div class="contact_img potition_absolute_center">
+      <h2 class="home_h2">feel free to Contact</h2>
+    </div>
+    </a>
   </section>
 </section>
 

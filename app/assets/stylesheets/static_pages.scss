@@ -18,6 +18,12 @@ header, .history, .users, .contact{
 .float_right{
   float: right;
 }
+.float_left{
+  float: left;
+}
+.clear_both{
+  clear: both;
+}
 .margin_top5 {
   margin-top: 5px;
 }
@@ -28,17 +34,41 @@ header, .history, .users, .contact{
   margin-left: 15%;
 }
 
+.header_h1{
+  animation: header-h1-slider 2s linear;
+  -webkit-animation: header-h1-slider 2s linear;
+}
+@keyframes header-h1-slider {
+  from { 
+    background-color: teal;
+    color: teal;
+    margin: 100%; }
+  to {  }
+}
+
+.fa-guitar{
+  animation: guitar 2s linear infinite;
+  -webkit-animation: guitar 2s linear infinite;
+}
+@keyframes guitar {
+  from { 
+  }
+  to { 
+    transform: rotate(360deg);
+     }
+}
+
 .header_div {
   height: 100%;
 }
 
 .header_bgimg1 {
-  margin-left: -6%;
+  left: -6%;
   background-image: url(/img/taylor.png);
   background-size: contain;
   background-repeat-y: no-repeat;
   top: 5%;
-  width: 100vw;
+  width: 90vw;
   height: 25%;
   animation: bg-slider 200s linear infinite;
   position: absolute;
@@ -51,11 +81,11 @@ header, .history, .users, .contact{
 }
 
 .header_bgimg2 {
-  margin-left: -6%;
+  left: -6%;
   background-image: url(/img/guitar.png);
   background-size: contain;
   background-repeat-y: no-repeat;
-  width: 100vw;
+  width: 90vw;
   height: 25%;
   animation: bg-slider2 200s linear infinite;
   position: absolute;
@@ -76,6 +106,18 @@ header, .history, .users, .contact{
   width: 30%;
 }
 
+.history_line2{
+  background-color: peachpuff;
+  box-shadow: -10px -10px 15px 8px grey;
+  animation: history-line 3s linear;
+  -webkit-animation: history-line 3s linear;
+}
+@keyframes history-line {
+	from {
+
+    opacity: 0;; }
+    to { ; }
+}
 .history h4{
   font-size: 2vw;
 }
@@ -86,6 +128,23 @@ header, .history, .users, .contact{
   border-radius: 50%;
   box-shadow: 20px 20px 35px -10px slategrey;
   animation: anime1 3s ease; 
+  overflow: hidden;
+      -moz-transition: -moz-transform 0.5s linear;
+    -webkit-transition: -webkit-transform 0.5s linear;
+    -o-transition: -o-transform 0.5s linear;
+    -ms-transition: -ms-transform 0.5s linear;
+    transition: transform 0.5s linear;
+}
+.history_div:hover{
+      -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+@keyframes anime1 {
+	from { opacity: 0; }
+    to { opacity: 1; }
 }
 .establish{
   background-image: url(/img/taylorguitar.jpg);
@@ -117,34 +176,18 @@ header, .history, .users, .contact{
 }
 
 #history1{
-  transition: 1s;
+  transition: 2s;
 }
 #history2{
-  transition: 1s;
+  transition: 2s;
 }
 #history3{
-  transition: 1s;
+  transition: 2s;
 }
 
 .home_h2{
   margin-bottom: 20px;
 }
-.history_p {
-  animation: anime1 5s ease; 
-}
- 
-@keyframes anime1 {
-    0% {
-        opacity:  0;                /* 透明度指定 */
-        top: 50px;                  /* 位置指定 */
-    }
-    100% {
-        opacity:  1;                /* 透明度指定 */
-        top: 0;                     /* 位置指定 */
-    }
-}
-
-
 
 .effect i {
   height: 120px;
@@ -155,5 +198,89 @@ header, .history, .users, .contact{
 .effect div {
   margin: auto;
   transition: .8s;
-  // transition-delay: .8s;
+}
+
+.example_users{
+  height: 90%;
+  position: relative;
+  overflow: hidden;
+}
+.user{
+  height: 100%;
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+.users_img{
+  height: 70%;
+  object-fit: contain;
+  margin: auto 0;
+  width: 100%;
+}
+.users_info{
+  height: 25%;
+}
+.users_info p{
+  overflow: scroll;
+  border: 1px solid lightgray;
+}
+.buttons{
+  height:5%;
+}
+.next{
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  font-size: 3vw;
+  color: cadetblue;
+}
+.prev{
+  position: absolute;
+  left: 10px;
+  top: 40%;
+  font-size: 3vw;
+  color: cadetblue;
+}
+.example_users h3{
+  margin: 5px;
+}
+.example_users p{
+  margin: 5px;
+}
+
+.slide {
+  display: none;
+}
+.active {/*.slide{...}よりも下に記述*/
+  display: block;
+}
+
+.taylorswift{
+  background-color: rosybrown;
+}
+.jasonmraz{
+  background-color: tan;
+}
+.nisina{
+  background-color: aliceblue;
+}
+
+.contact_img{
+  height: 70%;
+  width: 90%;
+  color: white;
+  background-image: url(/img/contact.jpg);
+  background-size: cover;
+}
+.contact h2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }

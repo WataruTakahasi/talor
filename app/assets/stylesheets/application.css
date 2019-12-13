@@ -139,7 +139,40 @@ h4 {
   font-size: 25px;
   letter-spacing: 3px;
 }
+ 
+.first_imp{
+  position: fixed;
+  top:0;
+  height: 100vh;
+  z-index: 999;
+  color: white;
+  background-color: black;
+  padding-top: 45vh;
+  padding-left: 5vw;
+  animation: slideInOut 2.5s;
+  animation-fill-mode: forwards;
+}
+.slideinout{
+}
+@keyframes slideInOut {
+  0% {
+    width: 0;
+  }
+  25% {
+  width: 100vw;
+  }
+  75% {
+  width: 100vw;
+  }
+  100% {
+  width: 0;
+  overflow: hidden;
+  }
+}
+
+.first_imp h1{
   
+}
 nav {
   color: white;
   background-color: black;
@@ -147,7 +180,7 @@ nav {
   height: 100vh;
   float: left;
   position: fixed;
-  z-index: 999;
+  z-index: 998;
 }
 .nav_title {
   font-size: 2vw;
@@ -171,15 +204,20 @@ nav {
   transform: translate(-50%,-50%);
 }
 .nav-content{
-    border: 1px solid #333;
-    height: 0;
-    opacity: 0;
-    padding: 0 10px;
-    transition: .5s;
-    visibility: hidden;
+  /*opacity: 0;*/
+  transition: .5s;
+  visibility: hidden;
+  position: fixed;
+  top:0;
+  height: 100vh;
+  z-index: 999;
+  color: white;
+  background-color: black;
+  padding-top: 45vh;
+  padding-left: 5vw;
+    
 }
 .nav-check:checked + .nav-label + .nav-content{
-    height: 40px;
     opacity: 1;
     padding: 10px;
     visibility: visible;
